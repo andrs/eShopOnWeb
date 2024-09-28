@@ -5,7 +5,7 @@ on: [push, workflow_dispatch]
 
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
-  RESOURCE-GROUP: rg-eshoponweb-andreschesa1
+  RESOURCE-GROUP: rg-eshoponweb-andreschesa                  
   LOCATION: westeurope
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 6ac55656-6198-4f22-8898-2d6b6120cda5
@@ -75,7 +75,7 @@ jobs:
     - name: Azure Login
       uses: azure/login@v2
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS1 }}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
